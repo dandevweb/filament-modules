@@ -1,0 +1,7 @@
+created:
+    - database/factories/TaskFactory.php
+    - database/migrations/2024_03_13_225632_create_tasks_table.php
+    - app/Models/Task.php
+    - database/seeders/TaskSeeder.php
+models:
+    Task: { title: string, description: 'longtext nullable', status: 'enum:backlog,todo,doing,done,testing default:backlog', attachment: 'json nullable', order: 'integer default:0', finished_at: 'datetime nullable', priority: 'boolean default:false', relationships: { belongsTo: User } }
